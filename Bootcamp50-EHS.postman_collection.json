@@ -1,0 +1,1206 @@
+{
+	"info": {
+		"_postman_id": "a005b28c-dee7-4522-b331-3518559f31e1",
+		"name": "Bootcamp50-EHS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28587409"
+	},
+	"item": [
+		{
+			"name": "CRUD",
+			"item": [
+				{
+					"name": "ConsultaClientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ConsultaClientes Gateway",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Producto-Todo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ConsultaClientesId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ConsultaClientesDocNumber",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ConsultaProductosCodigo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ClientePersonal-Crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"docType\": \"01\",\r\n    \"docNumber\": \"12345678\",\r\n    \"address\": \"Av. Los Postes 123\",\r\n    \"phone\": \"968541587\",\r\n    \"firstName\": \"Jose Manuel\",\r\n    \"lastName\": \"Mendoza Reyes\",\r\n    \"civilStatus\": \"Soltero\",\r\n    \"businessName\": null,\r\n    \"representative\": null,\r\n    \"typeCustomer\": \"Personal\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Cliente-1",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"docType\": \"01\",\r\n    \"docNumber\": \"12345678\",\r\n    \"address\": \"Av. Los Postes 123\",\r\n    \"phone\": \"968541587\",\r\n    \"firstName\": \"Jose Manuel\",\r\n    \"lastName\": \"Mendoza Reyes\",\r\n    \"civilStatus\": \"Soltero\",\r\n    \"typeCustomer\": \"Personal\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/customer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"customer"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Cliente-2",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"docType\": \"01\",\r\n    \"docNumber\": \"23987458\",\r\n    \"address\": \"Av. Las Flores 555\",\r\n    \"phone\": \"925478109\",\r\n    \"firstName\": \"Natalia\",\r\n    \"lastName\": \" Rosales Dias\",\r\n    \"civilStatus\": \"Soltero\",\r\n    \"typeCustomer\": \"Personal\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/customer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"customer"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "ClientePersonal-Actualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"docType\": \"01\",\r\n    \"docNumber\": \"12345679\",\r\n    \"address\": \"Av. Los Postes 589\",\r\n    \"phone\": \"968541587\",\r\n    \"firstName\": \"Jose Manuel\",\r\n    \"lastName\": \"Mendoza Reyes\",\r\n    \"civilStatus\": \"Soltero\",\r\n    \"businessName\": null,\r\n    \"representative\": null,\r\n    \"typeCustomer\": \"Personal\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/customer/65ddf0253df7a86a6f56d64b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer",
+								"65ddf0253df7a86a6f56d64b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ClienteEmpresarial-Crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"docType\": \"01\",\r\n    \"docNumber\": \"12345678\",\r\n    \"address\": \"Av. Los Postes 123\",\r\n    \"phone\": \"968541587\",\r\n    \"firstName\": \"Jose Manuel\",\r\n    \"lastName\": \"Mendoza Reyes\",\r\n    \"civilStatus\": \"Soltero\",\r\n    \"businessName\": null,\r\n    \"representative\": null,\r\n    \"typeCustomer\": \"Personal\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Cliente-2",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"docType\": \"06\",\r\n    \"docNumber\": \"10254783650\",\r\n    \"address\": \"Av. Tusilagos 658\",\r\n    \"phone\": \"952014725\",\r\n    \"businessName\": \"Inversiones ABC\",\r\n    \"representative\": \"Ricardo Perez\",\r\n    \"typeCustomer\": \"Empresarial\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/customer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"customer"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Cliente-2",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"docType\": \"06\",\r\n    \"docNumber\": \"10365478215\",\r\n    \"address\": \"Jr. Los Geranios 698\",\r\n    \"phone\": \"985201475\",\r\n    \"businessName\": \"Desarrollador SAC\",\r\n    \"representative\": \"Maritza Armas\",\r\n    \"typeCustomer\": \"Empresarial\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/customer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"customer"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "ClienteEmpresarial-Actualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"id\": 2,\r\n    \"docType\": \"09\",\r\n    \"docNumber\": \"10236547800\",\r\n    \"address\": \"Jr Trujillo 999\",\r\n    \"phone\": \"9852014761\",\r\n    \"firstName\": null,\r\n    \"lastName\": null,\r\n    \"civilStatus\": null,\r\n    \"businessName\": \"Los Modeladores SAC\",\r\n    \"representative\": \"Carlos Peres Peres\",\r\n    \"typeCustomer\": \"Empresarial\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/customer/id?id=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer",
+								"id"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Producto-Actualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"1\",\r\n    \"codeAccount\": \"01\",\r\n    \"nameAccount\": \"Cuenta de Ahorro\",\r\n    \"commission\": false,\r\n    \"limitMovement\": true,\r\n    \"limitNumberWithdrawal\": null,\r\n    \"limitNumberDeposit\": null,\r\n    \"limitAccounts\": null,\r\n    \"typeProduct\": \"Pasivo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/product/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"product",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Producto-Crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codeAccount\": \"01\",\r\n    \"nameAccount\": \"Cuenta de Ahorro\",\r\n    \"commission\": false,\r\n    \"limitMovement\": true,\r\n\t\"limitTransacctions\": 20,\r\n    \"limitAccounts\": null,\r\n    \"typeProduct\": \"Pasivo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "CuentaAhorro",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"1\",\r\n    \"codeAccount\": \"01\",\r\n    \"nameAccount\": \"Cuenta de Ahorro\",\r\n    \"commission\": false,\r\n    \"limitMovement\": true,\r\n    \"limitNumberWithdrawal\": null,\r\n    \"limitNumberDeposit\": null,\r\n    \"limitAccounts\": null,\r\n    \"typeProduct\": \"Pasivo\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/product/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"product",
+										"1"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "CuentaCorriente",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"1\",\r\n    \"codeAccount\": \"01\",\r\n    \"nameAccount\": \"Cuenta de Ahorro\",\r\n    \"commission\": false,\r\n    \"limitMovement\": true,\r\n    \"limitNumberWithdrawal\": null,\r\n    \"limitNumberDeposit\": null,\r\n    \"limitAccounts\": null,\r\n    \"typeProduct\": \"Pasivo\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/product/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"product",
+										"1"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "PlazoFijo",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"1\",\r\n    \"codeAccount\": \"01\",\r\n    \"nameAccount\": \"Cuenta de Ahorro\",\r\n    \"commission\": false,\r\n    \"limitMovement\": true,\r\n    \"limitNumberWithdrawal\": null,\r\n    \"limitNumberDeposit\": null,\r\n    \"limitAccounts\": null,\r\n    \"typeProduct\": \"Pasivo\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/product/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"product",
+										"1"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "ConsultaBanco-Codigo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/bank/code/02",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"bank",
+								"code",
+								"02"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Banco-Crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codeBank\": \"02\",\r\n    \"nameBank\": \"Scotiabank\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/bank",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"bank"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Banco-1",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"codeBank\": \"02\",\r\n    \"nameBank\": \"Scotiabank\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8085/bank",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"bank"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Banco-2",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"codeBank\": \"02\",\r\n    \"nameBank\": \"Scotiabank\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8085/bank",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"bank"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Account",
+			"item": [
+				{
+					"name": "ObtenerCuentasporCliente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/account/bycustomer/65e8fb814369a159b981d154",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"account",
+								"bycustomer",
+								"65e8fb814369a159b981d154"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ObtenerCuentasporId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/account/65e9118d269e6b3cedfd0b06",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"account",
+								"65e9118d269e6b3cedfd0b06"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ObtenerCuentasporCliente Gateway",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "CrearCuentaPersonal",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"id\": 10,\r\n\t\"customerId\": \"5\",\r\n\t\"productId\": \"2\",\r\n\t\"accountNumber\": \"452 41258\",\r\n\t\"creationDate\": \"06/02/2024\",\r\n\t\"amount\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/account/withbank/01",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"account",
+								"withbank",
+								"01"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "CrearCuenta-1",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"customerId\": \"65e8fb384369a159b981d153\",\r\n\t\"productId\": \"65e8fafc63773a4450865e20\",\r\n\t\"accountNumber\": \"870-32541136525-01\",\r\n\t\"creationDate\": \"02/02/2023\",\r\n\t\"amount\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8083/account/withbank/02",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"account",
+										"withbank",
+										"02"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "CrearCuenta-2",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"customerId\": \"65e8fb384369a159b981d153\",\r\n\t\"productId\": \"65e8fb0163773a4450865e21\",\r\n\t\"accountNumber\": \"258-3620147\",\r\n\t\"creationDate\": \"04/02/2024\",\r\n\t\"amount\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8083/account/withbank/01",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"account",
+										"withbank",
+										"01"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "CrearCuentaEmpresarial",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"id\": 9,\r\n\t\"customerId\": \"2\",\r\n\t\"productId\": \"2\",\r\n\t\"accountNumber\": \"001 9999888777\",\r\n\t\"creationDate\": \"10/02/2023\",\r\n\t\"amount\": 0,\r\n    \"holder\": [\r\n        {\r\n            \"holderId\": 1,\r\n            \"holderName\": \"Jose Vargas\"\r\n        }\r\n    ],\r\n    \"authorizedSsignatories\":[\r\n\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/account/withbank/02",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"account",
+								"withbank",
+								"02"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "CrearCuenta-1",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"customerId\": \"65e8fb814369a159b981d154\",\r\n\t\"productId\": \"65e8fb0163773a4450865e21\",\r\n\t\"accountNumber\": \"002-325417895\",\r\n\t\"creationDate\": \"03/02/2023\",\r\n\t\"amount\": 0,\r\n    \"holder\": [\"Jose Vargas\"],\r\n    \"authorizedSsignatories\":[\r\n\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8083/account/withbank/02",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"account",
+										"withbank",
+										"02"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "CrearCuenta-2",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"customerId\": \"65e8fb814369a159b981d154\",\r\n\t\"productId\": \"65e8fb0163773a4450865e21\",\r\n\t\"accountNumber\": \"003-325417892-02\",\r\n\t\"creationDate\": \"03/02/2023\",\r\n\t\"amount\": 0,\r\n    \"holder\": [\r\n            \"Juan Perez\",\r\n            \"Nancy Quispe\"\r\n    ],\r\n    \"authorizedSsignatories\":[\r\n            \"Juan Perez\"\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8083/account/withbank/02",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"account",
+										"withbank",
+										"02"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "CrearCuenta-ErrorAhorro",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"customerId\": \"65e8fb814369a159b981d154\",\r\n\t\"productId\": \"65e8fb0163773a4450865e21\",\r\n\t\"accountNumber\": \"002-325417895\",\r\n\t\"creationDate\": \"03/02/2023\",\r\n\t\"amount\": 0,\r\n    \"holder\": [\r\n        {\r\n            \"holderName\": \"Juan Perez\"\r\n        },\r\n        {\r\n            \"holderName\": \"Nancy Quispe\"\r\n        }\r\n    ],\r\n    \"authorizedSsignatories\":[\r\n\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8083/account/withbank/02",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"account",
+										"withbank",
+										"02"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "ClienteDesdeCuenta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/account/customer/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"account",
+								"customer",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transaction",
+			"item": [
+				{
+					"name": "TransaccionesCuenta-Todo",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "RegistroDeposito",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"description\": \"Deposito de venta\",\r\n    \"dateTransaction\": \"15/02/2024\",\r\n    \"amount\": 80,\r\n    \"typeTransaction\": \"Deposito\",\r\n    \"accountId\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/account/deposit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"account",
+								"deposit"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Deposito-1",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"codeOperation\": \"36254\",\r\n    \"description\": \"otro deposito\",\r\n    \"amount\": 80,\r\n    \"accountId\": \"65ea404ce416854d046cb5ff\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8084/transaction/deposit",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"transaction",
+										"deposit"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Deposito-2",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"codeOperation\": \"36521\",\r\n    \"description\": \"Apertura de cuenta\",\r\n    \"amount\": 1500,\r\n    \"accountId\": \"65eb9836c45d254ffad60052\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8084/transaction/deposit",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"transaction",
+										"deposit"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "RegistroRetiro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codeOperation\": \"12589\",\r\n    \"description\": \"Pago de facturas\",\r\n    \"dateTransaction\": \"21/02/2024\",\r\n    \"amount\": 100,\r\n    \"typeTransaction\": \"Retiro\",\r\n    \"accountId\": 6\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/transaction/withdrawal",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"transaction",
+								"withdrawal"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Retiro-1",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"codeOperation\": \"12589\",\r\n    \"description\": \"Pago de facturas\",\r\n    \"dateTransaction\": \"21/02/2024\",\r\n    \"amount\": 100,\r\n    \"typeTransaction\": \"Retiro\",\r\n    \"accountId\": 6\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8084/transaction/withdrawal",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"transaction",
+										"withdrawal"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Transferencia",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codeOperation\": \"32587\",\r\n    \"description\": \"Devolucion por pago deuda\",\r\n    \"dateTransfer\":\"21/02/2024\",\r\n    \"fromAccountId\": \"65ea404ce416854d046cb5ff\",\r\n    \"toAccountId\": \"65e91136269e6b3cedfd0b05\",\r\n    \"amount\": 100\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/transaction/transfer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"transaction",
+								"transfer"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Transferencia-ErrorBancoDiferente",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"codeOperation\": \"25771\",\r\n    \"description\": \"transferencia entre cuentas\",\r\n    \"fromAccountId\": \"65ea404ce416854d046cb5ff\",\r\n    \"toAccountId\": \"65e91136269e6b3cedfd0b05\",\r\n    \"amount\": 10\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8084/transaction/transfer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"transaction",
+										"transfer"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Transferencia-ClienteDifBancoIgual",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"codeOperation\": \"25771\",\r\n    \"description\": \"transferencia entre cuentas\",\r\n    \"fromAccountId\": \"65ea404ce416854d046cb5ff\",\r\n    \"toAccountId\": \"65e91136269e6b3cedfd0b05\",\r\n    \"amount\": 10\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8084/transaction/transfer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"transaction",
+										"transfer"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		}
+	]
+}
