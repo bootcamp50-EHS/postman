@@ -999,6 +999,194 @@
 			]
 		},
 		{
+			"name": "Credit",
+			"item": [
+				{
+					"name": "ObteberCreditoporClienteId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8087/api/credit/retrieve/bycustomer/65e8fb814369a159b981d154",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"api",
+								"credit",
+								"retrieve",
+								"bycustomer",
+								"65e8fb814369a159b981d154"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ObtenerCreditoporId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8087/api/credit/retrieve/65f33b4c7985a11ef6a70e55",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"api",
+								"credit",
+								"retrieve",
+								"65f33b4c7985a11ef6a70e55"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CrearCredito",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8087/api/account/create/withbank/01",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"api",
+								"account",
+								"create",
+								"withbank",
+								"01"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "CrearCredito - 1",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"customerId\": \"65e8fb384369a159b981d153\",\r\n\t\"amount\": 1000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8087/api/credit/create/withbank/01",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8087",
+									"path": [
+										"api",
+										"credit",
+										"create",
+										"withbank",
+										"01"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "CrearCredito-ErrorYaCredito",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"customerId\": \"65e8fb384369a159b981d153\",\r\n\t\"amount\": 2000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8087/api/credit/create/withbank/01",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8087",
+									"path": [
+										"api",
+										"credit",
+										"create",
+										"withbank",
+										"01"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "CrearCredito - 2",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"customerId\": \"65e8fb814369a159b981d154\",\r\n\t\"amount\": 9000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8087/api/credit/create/withbank/01",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8087",
+									"path": [
+										"api",
+										"credit",
+										"create",
+										"withbank",
+										"01"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
 			"name": "Transaction",
 			"item": [
 				{
@@ -1044,7 +1232,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"codeOperation\": \"98745\",\r\n    \"description\": \"otro deposito 3\",\r\n    \"amount\": 100,\r\n    \"accountId\": \"65ea404ce416854d046cb5ff\"\r\n}",
+									"raw": "{\r\n    \"codeOperation\": \"33147\",\r\n    \"description\": \"otro deposito 7\",\r\n    \"amount\": 95,\r\n    \"accountId\": \"65ea404ce416854d046cb5ff\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1085,13 +1273,14 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8084/transaction/deposit",
+									"raw": "http://localhost:8084/api/transaction/deposit",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
 									"port": "8084",
 									"path": [
+										"api",
 										"transaction",
 										"deposit"
 									]
@@ -1262,6 +1451,68 @@
 							"body": null
 						}
 					]
+				},
+				{
+					"name": "RegistroPagoCredito",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8084/api/transaction/paycredit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"api",
+								"transaction",
+								"paycredit"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "RegistroPagoCredito",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"codeOperation\": \"00025\",\r\n    \"description\": \"pago de credito 1\",\r\n    \"amount\": 600,\r\n    \"creditId\": \"65f37414555c78720af4a2a2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8084/api/transaction/paycredit",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"api",
+										"transaction",
+										"paycredit"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
 				}
 			]
 		},
@@ -1391,7 +1642,22 @@
 					"name": "ConsultaBancoporCodigo Gateway",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/bank/list/code/01",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"bank",
+								"list",
+								"code",
+								"01"
+							]
+						}
 					},
 					"response": []
 				},
@@ -1399,7 +1665,21 @@
 					"name": "ObtenerCuentasporCliente Gateway",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/account/bycustomer/65e8fb814369a159b981d154",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"account",
+								"bycustomer",
+								"65e8fb814369a159b981d154"
+							]
+						}
 					},
 					"response": []
 				},
@@ -1418,7 +1698,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8090/api/account/withbank/02",
+							"raw": "http://localhost:8090/api/account/create/withbank/02",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1427,6 +1707,7 @@
 							"path": [
 								"api",
 								"account",
+								"create",
 								"withbank",
 								"02"
 							]
@@ -1440,7 +1721,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"customerId\": \"65e8fb814369a159b981d154\",\r\n\t\"productId\": \"65e8fb0163773a4450865e21\",\r\n\t\"accountNumber\": \"003-325417895\",\r\n\t\"creationDate\": \"10/02/2023\",\r\n\t\"amount\": 0,\r\n    \"holder\": [\"Jose Martinez\"],\r\n    \"authorizedSsignatories\":[\r\n\r\n    ]\r\n}",
+									"raw": "{\r\n\t\"customerId\": \"65e8fb814369a159b981d154\",\r\n\t\"productId\": \"65e8fb0163773a4450865e21\",\r\n\t\"accountNumber\": \"004-325417895\",\r\n\t\"creationDate\": \"10/02/2023\",\r\n\t\"amount\": 0,\r\n    \"holder\": [\"Jose Martinez\"],\r\n    \"authorizedSsignatories\":[\r\n\r\n    ]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1448,7 +1729,7 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8090/api/account/withbank/02",
+									"raw": "http://localhost:8090/api/account/create/withbank/02",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -1457,6 +1738,7 @@
 									"path": [
 										"api",
 										"account",
+										"create",
 										"withbank",
 										"02"
 									]
@@ -1474,7 +1756,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"customerId\": \"65e8fb814369a159b981d154\",\r\n\t\"productId\": \"65e8fb0163773a4450865e21\",\r\n\t\"accountNumber\": \"003-325417892-02\",\r\n\t\"creationDate\": \"03/02/2023\",\r\n\t\"amount\": 0,\r\n    \"holder\": [\r\n            \"Juan Perez\",\r\n            \"Nancy Quispe\"\r\n    ],\r\n    \"authorizedSsignatories\":[\r\n            \"Juan Perez\"\r\n    ]\r\n}",
+									"raw": "{\r\n\t\"customerId\": \"65e8fb814369a159b981d154\",\r\n\t\"productId\": \"65e8fb0163773a4450865e21\",\r\n\t\"accountNumber\": \"106-325417892-03\",\r\n\t\"creationDate\": \"12/02/2024\",\r\n    \"holder\": [\r\n            \"Juan Perez\",\"Luis Perez\"\r\n    ],\r\n    \"authorizedSsignatories\":[\r\n            \"Juan Perez\"\r\n    ]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1482,16 +1764,18 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8083/account/withbank/02",
+									"raw": "http://localhost:8090/api/account/create/withbank/01",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8083",
+									"port": "8090",
 									"path": [
+										"api",
 										"account",
+										"create",
 										"withbank",
-										"02"
+										"01"
 									]
 								}
 							},
@@ -1629,6 +1913,313 @@
 										"create",
 										"withbank",
 										"01"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "ObtenerTransaccionesCuenta Gateway",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/transaction/account/65ea404ce416854d046cb5ff",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"transaction",
+								"account",
+								"65ea404ce416854d046cb5ff"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RegistroDeposito Gateway",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"description\": \"Deposito de venta\",\r\n    \"dateTransaction\": \"15/02/2024\",\r\n    \"amount\": 80,\r\n    \"typeTransaction\": \"Deposito\",\r\n    \"accountId\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/transaction/deposit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"transaction",
+								"deposit"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Deposito-1",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"codeOperation\": \"33147\",\r\n    \"description\": \"otro deposito 7\",\r\n    \"amount\": 95,\r\n    \"accountId\": \"65ea404ce416854d046cb5ff\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/api/transaction/deposit",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"transaction",
+										"deposit"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Deposito-2",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"codeOperation\": \"32145\",\r\n    \"description\": \"Apertura de cuenta\",\r\n    \"amount\": 1300,\r\n    \"accountId\": \"65f4e64fb4e4043ff01ae9f5\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/api/transaction/deposit",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"transaction",
+										"deposit"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "RegistroRetiro Gateway",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codeOperation\": \"12589\",\r\n    \"description\": \"Pago de facturas\",\r\n    \"dateTransaction\": \"21/02/2024\",\r\n    \"amount\": 100,\r\n    \"typeTransaction\": \"Retiro\",\r\n    \"accountId\": 6\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/transaction/withdrawal",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"transaction",
+								"withdrawal"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Retiro-1",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"codeOperation\": \"33217\",\r\n    \"description\": \"retiro para disponibilidad\",\r\n    \"dateTransaction\": \"21/02/2024\",\r\n    \"amount\": 150,\r\n    \"accountId\": \"65f4e64fb4e4043ff01ae9f5\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/api/transaction/withdrawal",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"transaction",
+										"withdrawal"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "RegistroPagoCredito Gateway",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/transaction/paycredit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"transaction",
+								"paycredit"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "RegistroPagoCredito",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"codeOperation\": \"00026\",\r\n    \"description\": \"pago de credito 5\",\r\n    \"amount\": 150,\r\n    \"creditId\": \"65f37414555c78720af4a2a2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/api/transaction/paycredit",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"transaction",
+										"paycredit"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "RegistroPagoCreditoKafka",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/transaction/paycreditkafka",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"transaction",
+								"paycreditkafka"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "RegistroPagoCredito",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"codeOperation\": \"00030\",\r\n    \"description\": \"pago de credito kafka 5\",\r\n    \"amount\": 15,\r\n    \"creditId\": \"65f37414555c78720af4a2a2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/api/transaction/paycreditkafka",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"transaction",
+										"paycreditkafka"
 									]
 								}
 							},
