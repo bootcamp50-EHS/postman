@@ -15,14 +15,16 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/customer",
+							"raw": "http://localhost:8081/api/customer/list",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8081",
 							"path": [
-								"customer"
+								"api",
+								"customer",
+								"list"
 							]
 						}
 					},
@@ -34,14 +36,16 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8082/product",
+							"raw": "http://localhost:8082/api/product/list",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8082",
 							"path": [
-								"product"
+								"api",
+								"product",
+								"list"
 							]
 						}
 					},
@@ -53,14 +57,16 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8082/product",
+							"raw": "http://localhost:8085/list/code/02",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8082",
+							"port": "8085",
 							"path": [
-								"product"
+								"list",
+								"code",
+								"02"
 							]
 						}
 					},
@@ -72,14 +78,17 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/customer",
+							"raw": "http://localhost:8081/api/customer/list/65e8fb814369a159b981d154",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8081",
 							"path": [
-								"customer"
+								"api",
+								"customer",
+								"list",
+								"65e8fb814369a159b981d154"
 							]
 						}
 					},
@@ -91,14 +100,16 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/customer",
+							"raw": "http://localhost:8081/customer/bydocnumber/12345678",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8081",
 							"path": [
-								"customer"
+								"customer",
+								"bydocnumber",
+								"12345678"
 							]
 						}
 					},
@@ -306,7 +317,7 @@
 					},
 					"response": [
 						{
-							"name": "Cliente-2",
+							"name": "ClienteGateway-2",
 							"originalRequest": {
 								"method": "POST",
 								"header": [],
@@ -320,14 +331,16 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8081/customer",
+									"raw": "http://localhost:8090/api/customer/create",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8081",
+									"port": "8090",
 									"path": [
-										"customer"
+										"api",
+										"customer",
+										"create"
 									]
 								}
 							},
@@ -376,7 +389,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"id\": 2,\r\n    \"docType\": \"09\",\r\n    \"docNumber\": \"10236547800\",\r\n    \"address\": \"Jr Trujillo 999\",\r\n    \"phone\": \"9852014761\",\r\n    \"firstName\": null,\r\n    \"lastName\": null,\r\n    \"civilStatus\": null,\r\n    \"businessName\": \"Los Modeladores SAC\",\r\n    \"representative\": \"Carlos Peres Peres\",\r\n    \"typeCustomer\": \"Empresarial\"\r\n}",
+							"raw": "{\r\n\t\"id\": 2,\r\n    \"docType\": \"09\",\r\n    \"docNumber\": \"10236547800\",\r\n    \"address\": \"Jr Trujillo 999\",\r\n    \"phone\": \"9852014761\",\r\n    \"firstName\": null,\r\n    \"lastName\": null,\r\n    \"civilStatus\": null,\r\n    \"businessName\": \"Los Modeladores SAC\",\r\n    \"representative\": \"Carlos Peres Peres\",\r\n    \"typeCustomer\": \"Empresarial\",\r\n    \"status\": true\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -384,7 +397,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/customer/id?id=2",
+							"raw": "http://localhost:8080/customer/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -392,13 +405,7 @@
 							"port": "8080",
 							"path": [
 								"customer",
-								"id"
-							],
-							"query": [
-								{
-									"key": "id",
-									"value": "2"
-								}
+								"2"
 							]
 						}
 					},
@@ -411,7 +418,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": \"1\",\r\n    \"codeAccount\": \"01\",\r\n    \"nameAccount\": \"Cuenta de Ahorro\",\r\n    \"commission\": false,\r\n    \"limitMovement\": true,\r\n    \"limitNumberWithdrawal\": null,\r\n    \"limitNumberDeposit\": null,\r\n    \"limitAccounts\": null,\r\n    \"typeProduct\": \"Pasivo\"\r\n}",
+							"raw": "{\r\n    \"id\": \"2\",\r\n    \"codeAccount\": \"02\",\r\n    \"nameAccount\": \"Cuenta Corriente\",\r\n    \"commission\": true,\r\n    \"limitMovement\": false,\r\n    \"limitTransacctions\": 20,\r\n    \"limitNumberWithdrawal\": null,\r\n    \"limitNumberDeposit\": null,\r\n    \"limitAccounts\": null,\r\n    \"typeProduct\": \"Pasivo\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -419,7 +426,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8082/product/1",
+							"raw": "http://localhost:8082/product/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -427,7 +434,7 @@
 							"port": "8082",
 							"path": [
 								"product",
-								"1"
+								"2"
 							]
 						}
 					},
@@ -440,7 +447,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"codeAccount\": \"01\",\r\n    \"nameAccount\": \"Cuenta de Ahorro\",\r\n    \"commission\": false,\r\n    \"limitMovement\": true,\r\n\t\"limitTransacctions\": 20,\r\n    \"limitAccounts\": null,\r\n    \"typeProduct\": \"Pasivo\"\r\n}",
+							"raw": "{\r\n    \"codeAccount\": \"03\",\r\n    \"nameAccount\": \"Plazo Fijo\",\r\n    \"commission\": false,\r\n    \"limitMovement\": true,\r\n\t\"limitTransacctions\": 1,\r\n    \"limitAccounts\": null,\r\n    \"typeProduct\": \"Pasivo\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -461,13 +468,13 @@
 					},
 					"response": [
 						{
-							"name": "CuentaAhorro",
+							"name": "Producto-Crear",
 							"originalRequest": {
 								"method": "POST",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"id\": \"1\",\r\n    \"codeAccount\": \"01\",\r\n    \"nameAccount\": \"Cuenta de Ahorro\",\r\n    \"commission\": false,\r\n    \"limitMovement\": true,\r\n    \"limitNumberWithdrawal\": null,\r\n    \"limitNumberDeposit\": null,\r\n    \"limitAccounts\": null,\r\n    \"typeProduct\": \"Pasivo\"\r\n}",
+									"raw": "{\r\n    \"codeAccount\": \"01\",\r\n    \"nameAccount\": \"Cuenta de Ahorro\",\r\n    \"commission\": false,\r\n    \"limitMovement\": true,\r\n\t\"limitTransacctions\": 20,\r\n    \"limitAccounts\": null,\r\n    \"typeProduct\": \"Pasivo\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -475,15 +482,14 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8082/product/1",
+									"raw": "http://localhost:8082/product",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
 									"port": "8082",
 									"path": [
-										"product",
-										"1"
+										"product"
 									]
 								}
 							},
@@ -499,7 +505,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"id\": \"1\",\r\n    \"codeAccount\": \"01\",\r\n    \"nameAccount\": \"Cuenta de Ahorro\",\r\n    \"commission\": false,\r\n    \"limitMovement\": true,\r\n    \"limitNumberWithdrawal\": null,\r\n    \"limitNumberDeposit\": null,\r\n    \"limitAccounts\": null,\r\n    \"typeProduct\": \"Pasivo\"\r\n}",
+									"raw": "{\r\n    \"codeAccount\": \"02\",\r\n    \"nameAccount\": \"Cuenta Corriente\",\r\n    \"commission\": true,\r\n    \"limitMovement\": false,\r\n\t\"limitTransacctions\": 20,\r\n    \"limitAccounts\": null,\r\n    \"typeProduct\": \"Pasivo\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -507,15 +513,14 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8082/product/1",
+									"raw": "http://localhost:8082/product",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
 									"port": "8082",
 									"path": [
-										"product",
-										"1"
+										"product"
 									]
 								}
 							},
@@ -525,13 +530,13 @@
 							"body": null
 						},
 						{
-							"name": "PlazoFijo",
+							"name": "Producto-Crear",
 							"originalRequest": {
 								"method": "POST",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"id\": \"1\",\r\n    \"codeAccount\": \"01\",\r\n    \"nameAccount\": \"Cuenta de Ahorro\",\r\n    \"commission\": false,\r\n    \"limitMovement\": true,\r\n    \"limitNumberWithdrawal\": null,\r\n    \"limitNumberDeposit\": null,\r\n    \"limitAccounts\": null,\r\n    \"typeProduct\": \"Pasivo\"\r\n}",
+									"raw": "{\r\n    \"codeAccount\": \"03\",\r\n    \"nameAccount\": \"Plazo Fijo\",\r\n    \"commission\": false,\r\n    \"limitMovement\": true,\r\n\t\"limitTransacctions\": 1,\r\n    \"limitAccounts\": null,\r\n    \"typeProduct\": \"Pasivo\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -539,15 +544,14 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8082/product/1",
+									"raw": "http://localhost:8082/product",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
 									"port": "8082",
 									"path": [
-										"product",
-										"1"
+										"product"
 									]
 								}
 							},
@@ -564,7 +568,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8085/bank/code/02",
+							"raw": "http://localhost:8085/bank/code/01",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -573,7 +577,7 @@
 							"path": [
 								"bank",
 								"code",
-								"02"
+								"01"
 							]
 						}
 					},
@@ -613,7 +617,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"codeBank\": \"02\",\r\n    \"nameBank\": \"Scotiabank\"\r\n}",
+									"raw": "{\r\n    \"codeBank\": \"01\",\r\n    \"nameBank\": \"Banco de Credito\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -681,14 +685,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8083/account/bycustomer/65e8fb814369a159b981d154",
+							"raw": "http://localhost:8083/bycustomer/65e8fb814369a159b981d154",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8083",
 							"path": [
-								"account",
 								"bycustomer",
 								"65e8fb814369a159b981d154"
 							]
@@ -702,15 +705,17 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8083/account/65e9118d269e6b3cedfd0b06",
+							"raw": "http://localhost:8083/api/account/bycustomer/65e8fb384369a159b981d153",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8083",
 							"path": [
+								"api",
 								"account",
-								"65e9118d269e6b3cedfd0b06"
+								"bycustomer",
+								"65e8fb384369a159b981d153"
 							]
 						}
 					},
@@ -722,7 +727,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8083/api/account/65e91bb94dfafa3564904140",
+							"raw": "http://localhost:8083/api/account/list/65ea404ce416854d046cb5ff",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -731,7 +736,8 @@
 							"path": [
 								"api",
 								"account",
-								"65e91bb94dfafa3564904140"
+								"list",
+								"65ea404ce416854d046cb5ff"
 							]
 						}
 					},
@@ -743,16 +749,18 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8083/account/customer/2",
+							"raw": "http://localhost:8083/api/account/customer/list/65e8fb384369a159b981d153",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8083",
 							"path": [
+								"api",
 								"account",
 								"customer",
-								"2"
+								"list",
+								"65e8fb384369a159b981d153"
 							]
 						}
 					},
@@ -829,7 +837,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"customerId\": \"65f0bac33f7b22257407968d\",\r\n\t\"productId\": \"65e8fb0163773a4450865e21\",\r\n\t\"accountNumber\": \"001-6633225544-090\",\r\n\t\"creationDate\": \"10/02/2024\",\r\n\t\"amount\": 0\r\n}",
+									"raw": "{\r\n\t\"customerId\": \"65f0bac33f7b22257407968d\",\r\n\t\"productId\": \"65e8fb0163773a4450865e21\",\r\n\t\"accountNumber\": \"002-6633225544-090\",\r\n\t\"creationDate\": \"10/02/2024\",\r\n\t\"amount\": 0\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1007,7 +1015,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8087/api/credit/retrieve/bycustomer/65e8fb814369a159b981d154",
+							"raw": "http://localhost:8087/api/credit/retrieve/bycustomer/65e8fb384369a159b981d153",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1018,7 +1026,7 @@
 								"credit",
 								"retrieve",
 								"bycustomer",
-								"65e8fb814369a159b981d154"
+								"65e8fb384369a159b981d153"
 							]
 						}
 					},
@@ -1030,7 +1038,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8087/api/credit/retrieve/65f33b4c7985a11ef6a70e55",
+							"raw": "http://localhost:8087/api/credit/retrieve/65f3a11dfc9ad1792a0cc06b",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1040,7 +1048,7 @@
 								"api",
 								"credit",
 								"retrieve",
-								"65f33b4c7985a11ef6a70e55"
+								"65f3a11dfc9ad1792a0cc06b"
 							]
 						}
 					},
@@ -1061,7 +1069,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8087/api/account/create/withbank/01",
+							"raw": "http://localhost:8087/api/credit/create/withbank/01",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1069,7 +1077,7 @@
 							"port": "8087",
 							"path": [
 								"api",
-								"account",
+								"credit",
 								"create",
 								"withbank",
 								"01"
@@ -1084,7 +1092,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"customerId\": \"65e8fb384369a159b981d153\",\r\n\t\"amount\": 1000\r\n}",
+									"raw": "{\r\n\t\"customerId\": \"65e8fb384369a159b981d153\",\r\n\t\"amount\": 1500\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1119,7 +1127,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"customerId\": \"65e8fb384369a159b981d153\",\r\n\t\"amount\": 2000\r\n}",
+									"raw": "{\r\n\t\"customerId\": \"65e8fb384369a159b981d153\",\r\n\t\"amount\": 3000\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1127,7 +1135,7 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8087/api/credit/create/withbank/01",
+									"raw": "http://localhost:8087/api/credit/create/withbank/02",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -1138,7 +1146,7 @@
 										"credit",
 										"create",
 										"withbank",
-										"01"
+										"02"
 									]
 								}
 							},
@@ -1154,7 +1162,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"customerId\": \"65e8fb814369a159b981d154\",\r\n\t\"amount\": 9000\r\n}",
+									"raw": "{\r\n\t\"customerId\": \"65e8fb814369a159b981d154\",\r\n\t\"amount\": 20000\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1193,7 +1201,21 @@
 					"name": "TransaccionesCuenta-Todo",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8084/api/transaction/account/65ea404ce416854d046cb5ff",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"api",
+								"transaction",
+								"account",
+								"65ea404ce416854d046cb5ff"
+							]
+						}
 					},
 					"response": []
 				},
@@ -1204,7 +1226,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": 1,\r\n    \"description\": \"Deposito de venta\",\r\n    \"dateTransaction\": \"15/02/2024\",\r\n    \"amount\": 80,\r\n    \"typeTransaction\": \"Deposito\",\r\n    \"accountId\": 10\r\n}",
+							"raw": "{\r\n    \"codeOperation\": \"21589\",\r\n    \"description\": \"monto de apertura\",\r\n    \"dateTransaction\": \"10/02/2024\",\r\n    \"amount\": 1500,\r\n    \"accountId\": 8\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1212,14 +1234,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8083/account/deposit",
+							"raw": "http://localhost:8084/transaction/deposit",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8083",
+							"port": "8084",
 							"path": [
-								"account",
+								"transaction",
 								"deposit"
 							]
 						}
@@ -1328,7 +1350,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"codeOperation\": \"12589\",\r\n    \"description\": \"retiro en caja\",\r\n    \"dateTransaction\": \"21/02/2024\",\r\n    \"amount\": 30,\r\n    \"accountId\": \"65ea404ce416854d046cb5ff\"\r\n}",
+									"raw": "{\r\n    \"codeOperation\": \"96584\",\r\n    \"description\": \"retiro en caja 5\",\r\n    \"dateTransaction\": \"11/02/2024\",\r\n    \"amount\": 110,\r\n    \"accountId\": \"65ea404ce416854d046cb5ff\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1486,7 +1508,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"codeOperation\": \"00025\",\r\n    \"description\": \"pago de credito 1\",\r\n    \"amount\": 600,\r\n    \"creditId\": \"65f37414555c78720af4a2a2\"\r\n}",
+									"raw": "{\r\n    \"codeOperation\": \"00026\",\r\n    \"description\": \"pago de credito 5\",\r\n    \"amount\": 100,\r\n    \"creditId\": \"65f37414555c78720af4a2a2\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1682,6 +1704,136 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "ProductoCrear Gateway",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codeAccount\": \"01\",\r\n    \"nameAccount\": \"Cuenta de Ahorro\",\r\n    \"commission\": false,\r\n    \"limitMovement\": true,\r\n\t\"limitTransacctions\": 20,\r\n    \"limitAccounts\": null,\r\n    \"typeProduct\": \"Pasivo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/product/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"product",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "CuentaAhorro",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"codeAccount\": \"01\",\r\n    \"nameAccount\": \"Cuenta de Ahorro\",\r\n    \"commission\": false,\r\n    \"limitMovement\": true,\r\n    \"limitNumberWithdrawal\": null,\r\n    \"limitNumberDeposit\": null,\r\n    \"limitAccounts\": null,\r\n    \"typeProduct\": \"Pasivo\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/api/product/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"product",
+										"create"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "CuentaCorriente",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"1\",\r\n    \"codeAccount\": \"01\",\r\n    \"nameAccount\": \"Cuenta de Ahorro\",\r\n    \"commission\": false,\r\n    \"limitMovement\": true,\r\n    \"limitNumberWithdrawal\": null,\r\n    \"limitNumberDeposit\": null,\r\n    \"limitAccounts\": null,\r\n    \"typeProduct\": \"Pasivo\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/api/product/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"product",
+										"create"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "PlazoFijo",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"1\",\r\n    \"codeAccount\": \"01\",\r\n    \"nameAccount\": \"Cuenta de Ahorro\",\r\n    \"commission\": false,\r\n    \"limitMovement\": true,\r\n    \"limitNumberWithdrawal\": null,\r\n    \"limitNumberDeposit\": null,\r\n    \"limitAccounts\": null,\r\n    \"typeProduct\": \"Pasivo\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/api/product/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"product",
+										"create"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
 				},
 				{
 					"name": "CrearCuentaEmpresarial Gateway",
@@ -2078,7 +2230,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"codeOperation\": \"33217\",\r\n    \"description\": \"retiro para disponibilidad\",\r\n    \"dateTransaction\": \"21/02/2024\",\r\n    \"amount\": 150,\r\n    \"accountId\": \"65f4e64fb4e4043ff01ae9f5\"\r\n}",
+									"raw": "{\r\n    \"codeOperation\": \"33217\",\r\n    \"description\": \"retiro para disponibilidad\",\r\n    \"dateTransaction\": \"21/02/2024\",\r\n    \"amount\": 200,\r\n    \"accountId\": \"65f4e64fb4e4043ff01ae9f5\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
